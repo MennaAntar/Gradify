@@ -4,6 +4,7 @@ using Gradify.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Gradify.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250802200128_SomeEdits2")]
+    partial class SomeEdits2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,7 +44,7 @@ namespace Gradify.Infrastructure.Data.Migrations
 
                     b.HasKey("Code");
 
-                    b.ToTable("Courses", (string)null);
+                    b.ToTable("Courses");
                 });
 
             modelBuilder.Entity("Gradify.Core.Models.Exam", b =>
@@ -84,7 +87,7 @@ namespace Gradify.Infrastructure.Data.Migrations
 
                     b.HasIndex("RegistrationID");
 
-                    b.ToTable("Exams", (string)null);
+                    b.ToTable("Exams");
                 });
 
             modelBuilder.Entity("Gradify.Core.Models.Registration", b =>
@@ -130,7 +133,7 @@ namespace Gradify.Infrastructure.Data.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("Registration", (string)null);
+                    b.ToTable("Registration");
                 });
 
             modelBuilder.Entity("Gradify.Core.Models.RegistrationArchive", b =>
@@ -176,7 +179,7 @@ namespace Gradify.Infrastructure.Data.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("RegistrationArchives", (string)null);
+                    b.ToTable("RegistrationArchives");
                 });
 
             modelBuilder.Entity("Gradify.Core.Models.Semester", b =>
@@ -196,7 +199,7 @@ namespace Gradify.Infrastructure.Data.Migrations
 
                     b.HasKey("SemesterName");
 
-                    b.ToTable("Semesters", (string)null);
+                    b.ToTable("Semesters");
                 });
 
             modelBuilder.Entity("Gradify.Core.Models.SemesterCourseSettings", b =>
@@ -220,7 +223,7 @@ namespace Gradify.Infrastructure.Data.Migrations
 
                     b.HasIndex("SemesterName");
 
-                    b.ToTable("SemesterCourseSettings", (string)null);
+                    b.ToTable("SemesterCourseSettings");
                 });
 
             modelBuilder.Entity("Gradify.Core.Models.Student", b =>
@@ -255,7 +258,7 @@ namespace Gradify.Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Students", (string)null);
+                    b.ToTable("Students");
                 });
 
             modelBuilder.Entity("Gradify.Core.Models.Exam", b =>

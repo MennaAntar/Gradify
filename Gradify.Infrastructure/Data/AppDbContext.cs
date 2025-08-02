@@ -17,6 +17,7 @@ namespace Gradify.Infrastructure.Data
         public DbSet<Course> Courses { get; set; }
         public DbSet<Semester> Semesters { get; set; }
         public DbSet<RegistrationArchive> RegistrationArchives { get; set; }
+        public DbSet<Registration> Registrations { get; set; }
         public DbSet<SemesterCourseSettings> SemesterCourseSettings { get; set; }
         public DbSet<Exam> Exams { get; set; }
 

@@ -28,6 +28,7 @@ namespace Gradify.API
             builder.Services.AddScoped<ICourseRepository, CourseRepository>();
             builder.Services.AddScoped<ISemesterCourseSettingsRepository, SemesterCourseSettingsRepository>();
             builder.Services.AddScoped<IExamRepository, ExamRepository>();
+            builder.Services.AddScoped<IRegistrationRepository, RegistrationRepository>();
 
             var app = builder.Build();
 
