@@ -1,5 +1,7 @@
 
+using Gradify.Core.Interfaces;
 using Gradify.Infrastructure.Data;
+using Gradify.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -20,6 +22,12 @@ namespace Gradify.API
 
             builder.Services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddScoped<ISemesterRepository, SemesterRepository>();
+            builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+            builder.Services.AddScoped<ICourseRepository, CourseRepository>();
+            builder.Services.AddScoped<ISemesterCourseSettingsRepository, SemesterCourseSettingsRepository>();
+            builder.Services.AddScoped<IExamRepository, ExamRepository>();
 
             var app = builder.Build();
 

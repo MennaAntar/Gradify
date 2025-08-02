@@ -1,21 +1,17 @@
-﻿using Gradify.Core.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gradify.Core.Models
+namespace Gradify.Core.Responses
 {
-    public class SemesterCourseSettings
+    public class SemesterCourseSettingsResponse
     {
         public string CourseCode { get; set; }
         public string SemesterName { get; set; }
         public double CourseWorkValue { get; set; }
         public double FinalValue { get; set; }
-        public GeneralState State { get; set; } = GeneralState.Active;
-
-        public Course Course { get; set; }
-        public Semester Semester { get; set; }
     }
 }

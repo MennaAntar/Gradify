@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gradify.Core.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ namespace Gradify.Core.Models
         public string Code { get; set; }
         public string Name { get; set; }
         public int CreditHrs { get; set; }
+        public GeneralState State { get; set; } = GeneralState.Active;
 
         public ICollection<RegistrationArchive> RegistrationArchives { get; set; }
         public ICollection<Registration> Registrations { get; set; }

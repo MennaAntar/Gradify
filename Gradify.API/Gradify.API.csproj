@@ -16,10 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Gradify.Infrastructure\Gradify.Infrastructure.csproj" />
   </ItemGroup>
 

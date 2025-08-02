@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gradify.Core.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,9 +15,11 @@ namespace Gradify.Core.Models
         public double RealMarks { get; set; }
         public bool IsAbsent { get; set; }
         public bool IsSame { get; set; }
+        public GeneralState State { get; set; } = GeneralState.Active;
 
-        public int? RegistrationID { get; set; }
-        public int? RegistrationAID { get; set; }
+        public int? RegistrationID { get; set; } = null;
+        public int? RegistrationAID { get; set; } = null;
+
 
         public RegistrationArchive RegistrationArchive { get; set; }
         public Registration Registration { get; set; }

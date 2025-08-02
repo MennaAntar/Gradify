@@ -19,8 +19,4 @@
     <ProjectReference Include="..\Gradify.Core\Gradify.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
 </Project>

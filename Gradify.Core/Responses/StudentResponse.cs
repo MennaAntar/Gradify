@@ -1,13 +1,14 @@
 ﻿using Gradify.Core.Enums;
+using Gradify.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gradify.Core.Models
+namespace Gradify.Core.Responses
 {
-    public class Student
+    public class StudentResponse
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -15,10 +16,6 @@ namespace Gradify.Core.Models
         public int NetHrs { get; set; }
         public int CurrentPoints { get; set; }
         public DateTime LastCalculationDate { get; set; }
-        public StudentState Status { get; set; }
-        public GeneralState State { get; set; } = GeneralState.Active;
-
-        public ICollection<RegistrationArchive> RegistrationArchives { get; set; }
-        public ICollection<Registration> Registrations { get; set; }
+        public string Status { get; set; }
     }
 }
